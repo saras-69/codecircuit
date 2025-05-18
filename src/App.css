@@ -1,0 +1,24 @@
+@import "tailwindcss";
+/* Add this to the end of your existing CSS file */
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-40px) translateX(15px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.bubble-float {
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* Important: make sure pointer events are none for background elements */
+    pointer-events: none;
+}
